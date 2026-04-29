@@ -35,7 +35,7 @@ export function AppProvider({ children }) {
   useEffect(() => {
     if (!isSignedIn || !user) return
 
-    const s = io(import.meta.env.VITE_SOCKET_URL || 'http://localhost:5000', {
+    const s = io(import.meta.env.VITE_SOCKET_URL || 'https://skiilconect.onrender.com', {
       transports: ['websocket'],
     })
     setSocket(s)
